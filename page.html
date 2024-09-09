@@ -26,14 +26,14 @@ ol{
 
     <script type="text/babel">
       "use strict";
-      function BookList(books) {
-        console.log(books);
+      function BookList(props) {
+        console.log(props);
 
         return(
           <div>
             <ol>
               {
-                books.list.map(
+                props.list.map(
 
                   (item, index) => (
                     <li key={index}>
