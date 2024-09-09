@@ -1,14 +1,15 @@
 [
-{"book":"Neuromancer",
-"link":"https://www.foliosociety.com/usa/neuromancer.html?srsltid=AfmBOoogaTGpiRC8ZpG5dHbc9tCuJGJhqAn8QoWW8JP2y6qlUNSVpcNj"
-},
+    {
+        "book":"Neuromancer",
+        "link":"https://www.foliosociety.com/usa/neuromancer.html?srsltid=AfmBOoogaTGpiRC8ZpG5dHbc9tCuJGJhqAn8QoWW8JP2y6qlUNSVpcNj"
+    },
+    {
+        "book":"Count Zero",
+        "link":"https://cyberpunkmatrix.com/2020/12/06/cyberpunk-review-count-zero-by-william-gibson/"
+    },
 
-{"book":"Count Zero",
-"link":"https://cyberpunkmatrix.com/2020/12/06/cyberpunk-review-count-zero-by-william-gibson/"
-},
-
-{"book":"Mona Lisa Overdrive",
-"link":"https://www.youtube.com/watch?v=PB9Mi_hf7og"
-},
-
+    {
+        "book":"Mona Lisa Overdrive",
+        "link":"https://www.youtube.com/watch?v=PB9Mi_hf7og"
+    }
 ]
