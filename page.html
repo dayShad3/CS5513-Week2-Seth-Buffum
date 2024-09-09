@@ -14,15 +14,77 @@ ol{
   padding: 0;
   list-style-type: none;
 }
+li{
+  padding: 20px;
+}
+#sprawl {
+  position: fixed;
+  right: 0;
+  bottom: 50;
+  min-width: 100%;
+  min-height: 100%;
+}
+.overlay {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+.list {
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+  float: left;
+  list-style: none;
+  text-align: center;
+  background-color: #ec09f0;
+  margin-right: 30px;
+  width: 150px;
+  line-height: 60px;
+}
+.list li{
+  float: left;
+  list-style: none;
+  text-align: center;
+  background-color: #ec09f0;
+  margin-right: 30px;
+  width: 150px;
+  line-height: 60px;
+}
 
+.list li a {
+  text-decoration: none;
+  color: #FFFFFF;
+  display: block;
+}
+ li a:hover {
+  text-decoration: none;
+  color: #000000;
+  background-color: #33B5E5;
+}
 </style>
 </head>
 <body>
+  <video id="sprawl"  controls autoplay>
+    <source src="https://d39aw01fjrqpws.cloudfront.net/neuro.mp4" type="video/mp4">
+  </video>
+  <div class="overlay">
+    <h1>The sky above the port was the color of television, tuned to a dead channel.</h1>
+    <p id="blink">Click the screen</p>
+    <script type="text/javascript">
+      var blink = document.getElementById('blink');
+      setInterval(function() {
+          blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+      }, 1500);
+  </script>
+    </div>
 
-<h1>The sky above the port was the color of television, tuned to a dead channel.
-    </h1>
-
-    <div id="myApp"></div>
+    <div class="list" id="myApp"></div>
 
     <script type="text/babel">
       "use strict";
@@ -53,9 +115,9 @@ ol{
 
       // use jQuery to load JSON data from server 
       $.getJSON(
-        'x' // uel for jquery
+        'x', // url for jquery
         function(jsonFromJquery){
-          const myRoot = ReactDOM.createRoot( documentElementById('myApp'));
+          const myRoot = ReactDOM.createRoot( document.getElementById('myApp'));
 
           myRoot.render(
             <BookList list={jsonFromJquery} />
@@ -64,7 +126,7 @@ ol{
         }
       );
     </script>
-</div>
+
  
 </body>
 </html>
